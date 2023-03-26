@@ -1,6 +1,6 @@
 .clouds {
   animation: clouds 300s linear infinite;
-  background: transparent url("/clouds.png") repeat;
+  background: transparent url("/images/clouds.png") repeat;
   background-size: 2970px 663px;
   bottom: -6rem;
   content: "";

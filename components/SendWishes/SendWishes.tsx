@@ -2,8 +2,8 @@
 
 import { WishesRequest } from "@/app/api/wishes/sendWishes";
 import { SheetColumn } from "@/app/api/wishes/types";
-import submitButtonImage from "@/public/send-wishes.png";
-import headerImage from "@/public/wishes-baby-luna.png";
+import submitButtonImage from "@/public/images/send-wishes.png";
+import headerImage from "@/public/images/wishes-baby-luna.png";
 import cn from "classnames";
 import { Playfair_Display } from "next/font/google";
 import Image from "next/image";

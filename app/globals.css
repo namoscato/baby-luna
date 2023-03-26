@@ -8,6 +8,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-rgb)) url("/stardust.png") repeat fixed;
+  background: rgb(var(--background-rgb)) url("/images/stardust.png") repeat
+    fixed;
   margin: 0;
 }
