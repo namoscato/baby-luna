@@ -1,0 +1,25 @@
+.clouds {
+  animation: clouds 300s linear infinite;
+  background: transparent url("/clouds.png") repeat;
+  background-size: 2970px 663px;
+  bottom: -6rem;
+  content: "";
+  height: 663px;
+  position: fixed;
+  width: 100%;
+}
+
+.content {
+  min-height: 100vh;
+  position: relative;
+}
+
+@keyframes clouds {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 10000px 0;
+  }
+}

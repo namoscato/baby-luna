@@ -1,0 +1,160 @@
+.root {
+  font-size: 1.3em;
+  padding-bottom: var(--spacing);
+}
+
+.header {
+  text-align: center;
+}
+
+.headerImage {
+  margin-left: -10rem;
+  max-width: 52rem;
+  height: auto;
+  width: 120%;
+}
+
+.main {
+  margin: var(--spacing) auto;
+  max-width: var(--max-width);
+  padding: 0 0.4em;
+}
+
+.main > div {
+  transition: margin 0s, opacity 0s;
+}
+
+.mainSent > div {
+  margin-top: -1.859375em;
+  opacity: 0 !important;
+  transition: margin 0.3s linear, opacity 0.3s;
+}
+
+.mainSent > div:nth-child(1) {
+  transition-delay: 1.5s;
+}
+
+.mainSent > div:nth-child(2) {
+  transition-delay: 1.35s;
+}
+
+.mainSent > div:nth-child(3) {
+  transition-delay: 1.2s;
+}
+
+.mainSent > div:nth-child(4) {
+  transition-delay: 1.05s;
+}
+
+.mainSent > div:nth-child(5) {
+  transition-delay: 0.9s;
+}
+
+.mainSent > div:nth-child(6) {
+  transition-delay: 0.75s;
+}
+
+.mainSent > div:nth-child(7) {
+  transition-delay: 0.6s;
+}
+
+.mainSent > div:nth-child(8) {
+  transition-delay: 0.45s;
+}
+
+.mainSent > div:nth-child(9) {
+  transition-delay: 0.3s;
+}
+
+.mainSent > div:nth-child(10) {
+  transition-delay: 0.15s;
+}
+
+.formControl {
+  align-content: stretch;
+  border-bottom: 1px solid rgb(var(--foreground-rgb));
+  display: flex;
+  margin-top: 1.5em;
+  opacity: 0.3;
+  padding-bottom: 0.5em;
+  position: relative;
+  transition: opacity var(--transition-duration) linear;
+}
+
+.formControl:focus-within {
+  opacity: 1;
+}
+
+.formControl:focus-within::after {
+  bottom: 0;
+  box-shadow: 0 2px 0.5em 2px rgba(255, 255, 255, 0.4);
+  content: "";
+  display: block;
+  height: 1px;
+  position: absolute;
+  width: 100%;
+}
+
+.formLabel {
+  margin-right: 0.3em;
+  white-space: nowrap;
+}
+
+.formInput {
+  all: unset;
+  flex-grow: 1;
+}
+
+.footer {
+  text-align: center;
+}
+
+.submitButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: filter var(--transition-duration) linear,
+    opacity var(--transition-duration) linear;
+}
+
+.submitButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.submitButton:not([disabled]):hover {
+  filter: brightness(130%);
+}
+
+.submitButtonLoading {
+  cursor: progress !important;
+}
+
+.submitButtonImage {
+  height: auto;
+  max-width: 30.6875rem;
+  width: 100%;
+}
+
+.error {
+  font-size: 0.8em;
+  margin: 0;
+}
+
+@media (min-width: 30rem) {
+  .root {
+    font-size: 1.5em;
+  }
+}
+
+@media (min-width: 35rem) {
+  .root {
+    font-size: 1.7em;
+  }
+}
+
+@media (min-width: 43rem) {
+  .root {
+    font-size: 2em;
+  }
+}

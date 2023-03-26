@@ -1,0 +1,1 @@
+export { SendWishes } from "./SendWishes";
