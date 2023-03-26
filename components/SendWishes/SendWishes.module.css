@@ -87,7 +87,7 @@
 
 .formControl:focus-within::after {
   bottom: 0;
-  box-shadow: 0 2px 0.5em 2px rgba(255, 255, 255, 0.4);
+  box-shadow: 0 2px 0.5em 2px rgb(255 255 255 / 40%);
   content: "";
   display: block;
   height: 1px;
