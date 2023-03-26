@@ -1,7 +1,7 @@
+import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import "./globals.css";
 import styles from "./layout.module.css";
-import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Wishes for Baby Luna",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   themeColor: "#151e26",
   robots: { index: false },
   openGraph: {
-    images: [{ url: "/images/open-graph.jpg" }],
+    images: [{ url: `${process.env.VERCEL_URL ?? ""}/images/open-graph.jpg` }],
   },
 };
 
