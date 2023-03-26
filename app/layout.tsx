@@ -1,9 +1,11 @@
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 import "./globals.css";
 import styles from "./layout.module.css";
+import type { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Wishes for Baby Luna",
+  description: "Send wishes for Baby Luna",
   icons: [
     { rel: "apple-touch-icon", sizes: "180x180", url: "/apple-touch-icon.png" },
     {
@@ -22,6 +24,9 @@ export const metadata = {
   manifest: "/site.webmanifest",
   themeColor: "#151e26",
   robots: { index: false },
+  openGraph: {
+    images: [{ url: "/images/open-graph.jpg" }],
+  },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
