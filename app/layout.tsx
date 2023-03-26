@@ -25,7 +25,9 @@ export const metadata: Metadata = {
   themeColor: "#151e26",
   robots: { index: false },
   openGraph: {
-    images: [{ url: `${process.env.VERCEL_URL ?? ""}/images/open-graph.jpg` }],
+    images: [
+      { url: `https://${process.env.VERCEL_URL ?? ""}/images/open-graph.jpg` },
+    ],
   },
 };
 
