@@ -10,6 +10,7 @@ import Image from "next/image";
 import { FormEvent, useState } from "react";
 import styles from "./SendWishes.module.css";
 import { useSendWishes } from "./hooks/useSendWishes";
+import { useUnsavedChangesPrompt } from "./hooks/useUnsavedChangesPrompt";
 import {
   PROMPTS,
   labelFromPrompt,
@@ -25,7 +26,10 @@ export function SendWishes() {
 
   const invalid = !wishes[SheetColumn.Name].trim();
   const [formState, setFormState] = useState<"error" | "sent">();
+
   const { sendWishes, isSending } = useSendWishes();
+  useUnsavedChangesPrompt(isSending);
+
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
 
