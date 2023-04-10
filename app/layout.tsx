@@ -1,4 +1,7 @@
+import { Header } from "@/components/Header";
+import cn from "classnames";
 import type { Metadata } from "next";
+import { Playfair_Display } from "next/font/google";
 import type { ReactNode } from "react";
 import "./globals.css";
 import styles from "./layout.module.css";
@@ -31,12 +34,17 @@ export const metadata: Metadata = {
   },
 };
 
+const playfairDisplay = Playfair_Display({ subsets: ["latin"] });
+
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body>
         <div className={styles.clouds} />
-        <div className={styles.content}>{children}</div>
+        <div className={cn(styles.content, playfairDisplay.className)}>
+          <Header />
+          {children}
+        </div>
       </body>
     </html>
   );

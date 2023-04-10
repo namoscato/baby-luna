@@ -1,0 +1,29 @@
+.content {
+  position: relative;
+}
+
+.list {
+  line-height: 1.5;
+  list-style-type: none;
+  margin: var(--spacing) auto;
+  max-width: var(--max-width);
+  padding: 0 0.4em var(--spacing);
+}
+
+.list > li {
+  margin-top: 1.8em;
+}
+
+.prompt {
+  opacity: 0.7;
+}
+
+.response {
+  font-size: 1.2em;
+}
+
+@media (min-width: 30rem) {
+  .list {
+    font-size: 1.2em;
+  }
+}

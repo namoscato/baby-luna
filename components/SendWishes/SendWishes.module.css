@@ -3,17 +3,6 @@
   padding-bottom: var(--spacing);
 }
 
-.header {
-  text-align: center;
-}
-
-.headerImage {
-  margin-left: -10rem;
-  max-width: 52rem;
-  height: auto;
-  width: 120%;
-}
-
 .main {
   margin: var(--spacing) auto;
   max-width: var(--max-width);
