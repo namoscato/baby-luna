@@ -1,6 +1,6 @@
 import cn from "classnames";
-import { useEffect } from "react";
 import styles from "./Navigation.module.css";
+import { useKeyboardNavigation } from "./hooks/useKeyboardNavigation";
 
 interface Props {
   onPrevious: () => void;
@@ -8,21 +8,7 @@ interface Props {
 }
 
 export const Navigation = ({ onPrevious, onNext }: Props) => {
-  useEffect(() => {
-    const handleKeydown = ({ key }: KeyboardEvent) => {
-      if ("ArrowLeft" === key) {
-        onPrevious();
-      } else if ("ArrowRight" === key) {
-        onNext();
-      }
-    };
-
-    document.addEventListener("keydown", handleKeydown);
-
-    return () => {
-      document.removeEventListener("keydown", handleKeydown);
-    };
-  }, [onNext, onPrevious]);
+  useKeyboardNavigation({ onPrevious, onNext });
 
   return (
     <div className={styles.root}>

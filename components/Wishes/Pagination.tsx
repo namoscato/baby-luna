@@ -1,5 +1,5 @@
-import styles from "./Pagination.module.css";
 import cn from "classnames";
+import styles from "./Pagination.module.css";
 
 interface Props {
   activeIndex: number;

@@ -1,7 +1,8 @@
 .root {
-  --thumb-size: 0.6rem;
+  --thumb-size: 1rem;
   /* stylelint-disable-next-line color-function-notation */
   --track-border-rgb: rgba(var(--foreground-rgb), 30%);
+  --track-size: 2px;
 
   appearance: none;
   background: transparent;
@@ -16,12 +17,12 @@
 }
 
 .root::-webkit-slider-runnable-track {
-  border-bottom: 1px dashed var(--track-border-rgb);
+  border-bottom: var(--track-size) dotted var(--track-border-rgb);
   height: 0;
 }
 
 .root::-moz-range-track {
-  border-bottom: 1px dashed var(--track-border-rgb);
+  border-bottom: var(--track-size) dotted var(--track-border-rgb);
   height: 0;
 }
 
@@ -58,6 +59,6 @@
   }
 
   .root::-webkit-slider-thumb {
-    --thumb-size: 0.8rem;
+    --thumb-size: 1.3rem;
   }
 }
