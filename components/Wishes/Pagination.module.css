@@ -1,0 +1,64 @@
+.root {
+  --thumb-size: 1rem;
+  /* stylelint-disable-next-line color-function-notation */
+  --track-border-rgb: rgba(var(--foreground-rgb), 30%);
+  --track-size: 2px;
+
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  margin: var(--spacing) 0 0;
+  padding: var(--spacing) 0;
+  width: 100%;
+}
+
+.root:focus {
+  outline: none;
+}
+
+.root::-webkit-slider-runnable-track {
+  border-bottom: var(--track-size) dotted var(--track-border-rgb);
+  height: 0;
+}
+
+.root::-moz-range-track {
+  border-bottom: var(--track-size) dotted var(--track-border-rgb);
+  height: 0;
+}
+
+.root::-webkit-slider-thumb {
+  appearance: none;
+  background-color: rgb(var(--foreground-rgb));
+  border-radius: var(--thumb-size);
+  box-shadow: 0 0 0.7em 0.4em rgb(255 255 255 / 40%);
+  height: var(--thumb-size);
+  margin-top: calc(var(--thumb-size) / -2); /* Centers thumb on the track */
+  width: var(--thumb-size);
+}
+
+.root::-moz-range-thumb {
+  border: none; /* Removes extra border that FF applies */
+  background-color: rgb(var(--foreground-rgb));
+  border-radius: var(--thumb-size);
+  box-shadow: 0 0 0.7em 0.4em rgb(255 255 255 / 40%);
+  height: var(--thumb-size);
+  width: var(--thumb-size);
+}
+
+.root.loading::-webkit-slider-thumb {
+  display: none;
+}
+
+.root.loading::-moz-range-thumb {
+  display: none;
+}
+
+@media (min-width: 30rem) {
+  .root {
+    margin-top: calc(2 * var(--spacing));
+  }
+
+  .root::-webkit-slider-thumb {
+    --thumb-size: 1.3rem;
+  }
+}

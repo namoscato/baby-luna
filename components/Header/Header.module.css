@@ -1,0 +1,10 @@
+.root {
+  text-align: center;
+}
+
+.image {
+  margin-left: -10rem;
+  max-width: 52rem;
+  height: auto;
+  width: 120%;
+}

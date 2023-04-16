@@ -2,7 +2,7 @@ import { GoogleSpreadsheetWorksheet } from "google-spreadsheet";
 import { SheetColumn } from "./types";
 
 export type WishesRequest = Record<
-  Exclude<SheetColumn, SheetColumn.Submitted>,
+  Exclude<SheetColumn, SheetColumn.Submitted | SheetColumn.Reviewed>,
   string
 >;
 

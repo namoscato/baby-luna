@@ -11,4 +11,5 @@ export enum SheetColumn {
   HopeGetYourMoms = "get your mom’s",
   HopeGetYourDads = "get your dad’s",
   Submitted = "submitted",
+  Reviewed = "reviewed",
 }

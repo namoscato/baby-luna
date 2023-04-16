@@ -2,24 +2,16 @@
 
 import { WishesRequest } from "@/app/api/wishes/sendWishes";
 import { SheetColumn } from "@/app/api/wishes/types";
+import { PROMPTS, labelFromPrompt } from "@/lib/wishes/prompts";
 import submitButtonImage from "@/public/images/send-wishes.png";
-import headerImage from "@/public/images/wishes-baby-luna.png";
 import cn from "classnames";
-import { Playfair_Display } from "next/font/google";
 import Image from "next/image";
 import { FormEvent, useState } from "react";
 import styles from "./SendWishes.module.css";
 import { useSendWishes } from "./hooks/useSendWishes";
 import { useUnsavedChangesPrompt } from "./hooks/useUnsavedChangesPrompt";
-import {
-  PROMPTS,
-  labelFromPrompt,
-  placeholderFromPrompt,
-  requiredFromPrompt,
-} from "./utils/prompts";
+import { placeholderFromPrompt, requiredFromPrompt } from "./utils/prompts";
 import { EMPTY_WISHES_REQUEST } from "./utils/wishes";
-
-const playfairDisplay = Playfair_Display({ subsets: ["latin"] });
 
 export function SendWishes() {
   const [wishes, setWishes] = useState<WishesRequest>(EMPTY_WISHES_REQUEST);
@@ -57,20 +49,7 @@ export function SendWishes() {
   };
 
   return (
-    <form
-      className={cn(styles.root, playfairDisplay.className)}
-      onSubmit={handleSubmit}
-    >
-      <header className={styles.header}>
-        <Image
-          src={headerImage}
-          alt="Wishes for Baby Luna"
-          className={styles.headerImage}
-          width={832}
-          height={453}
-          priority
-        />
-      </header>
+    <form className={styles.root} onSubmit={handleSubmit}>
       <main
         className={cn(styles.main, {
           [styles.mainSent]: "sent" === formState,
