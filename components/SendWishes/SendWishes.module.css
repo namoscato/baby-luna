@@ -20,43 +20,43 @@
 }
 
 .mainSent > div:nth-child(1) {
-  transition-delay: 1.5s;
+  transition-delay: 1s;
 }
 
 .mainSent > div:nth-child(2) {
-  transition-delay: 1.35s;
-}
-
-.mainSent > div:nth-child(3) {
-  transition-delay: 1.2s;
-}
-
-.mainSent > div:nth-child(4) {
-  transition-delay: 1.05s;
-}
-
-.mainSent > div:nth-child(5) {
   transition-delay: 0.9s;
 }
 
-.mainSent > div:nth-child(6) {
-  transition-delay: 0.75s;
+.mainSent > div:nth-child(3) {
+  transition-delay: 0.8s;
 }
 
-.mainSent > div:nth-child(7) {
+.mainSent > div:nth-child(4) {
+  transition-delay: 0.7s;
+}
+
+.mainSent > div:nth-child(5) {
   transition-delay: 0.6s;
 }
 
-.mainSent > div:nth-child(8) {
-  transition-delay: 0.45s;
+.mainSent > div:nth-child(6) {
+  transition-delay: 0.5s;
 }
 
-.mainSent > div:nth-child(9) {
+.mainSent > div:nth-child(7) {
+  transition-delay: 0.4s;
+}
+
+.mainSent > div:nth-child(8) {
   transition-delay: 0.3s;
 }
 
+.mainSent > div:nth-child(9) {
+  transition-delay: 0.2s;
+}
+
 .mainSent > div:nth-child(10) {
-  transition-delay: 0.15s;
+  transition-delay: 0.1s;
 }
 
 .formControl {
@@ -125,7 +125,7 @@
   width: 100%;
 }
 
-.error {
+.submitState {
   font-size: 0.8em;
   margin: 0;
 }

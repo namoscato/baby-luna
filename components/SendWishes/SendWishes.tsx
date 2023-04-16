@@ -93,7 +93,10 @@ export function SendWishes() {
           />
         </button>
         {"error" === formState && (
-          <p className={styles.error}>Error sending wishes</p>
+          <p className={styles.submitState}>Error sending wishes</p>
+        )}
+        {"sent" === formState && (
+          <p className={styles.submitState}>Wishes received!</p>
         )}
       </footer>
     </form>
