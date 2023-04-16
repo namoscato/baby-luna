@@ -11,32 +11,31 @@ import styles from "./SendWishes.module.css";
 import { useSendWishes } from "./hooks/useSendWishes";
 import { useUnsavedChangesPrompt } from "./hooks/useUnsavedChangesPrompt";
 import { placeholderFromPrompt, requiredFromPrompt } from "./utils/prompts";
-import { EMPTY_WISHES_REQUEST } from "./utils/wishes";
+import { EMPTY_WISHES_REQUEST, isFilled } from "./utils/wishes";
 
 export function SendWishes() {
   const [wishes, setWishes] = useState<WishesRequest>(EMPTY_WISHES_REQUEST);
 
-  const invalid = !wishes[SheetColumn.Name].trim();
+  const isInvalid = !wishes[SheetColumn.Name].trim();
   const [formState, setFormState] = useState<"error" | "sent">();
 
-  const { sendWishes, isSending } = useSendWishes();
-  useUnsavedChangesPrompt(isSending);
+  useUnsavedChangesPrompt("sent" !== formState && isFilled(wishes));
 
+  const { sendWishes, isSending } = useSendWishes();
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
 
+    setFormState(undefined);
+
     if ("sent" === formState) {
       setWishes(EMPTY_WISHES_REQUEST);
-      setFormState(undefined);
 
       return;
     }
 
-    if (invalid) {
+    if (isInvalid) {
       return;
     }
-
-    setFormState(undefined);
 
     try {
       await sendWishes(wishes);
@@ -82,7 +81,7 @@ export function SendWishes() {
           className={cn(styles.submitButton, {
             [styles.submitButtonLoading]: isSending,
           })}
-          disabled={invalid || isSending}
+          disabled={isSending}
         >
           <Image
             src={submitButtonImage}

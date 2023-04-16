@@ -7,3 +7,10 @@ export const EMPTY_WISHES_REQUEST: WishesRequest = {
     return result;
   }, {} as Record<Prompt, string>),
 };
+
+export function isFilled(wishes: WishesRequest): boolean {
+  return Object.values(wishes).reduce<boolean>(
+    (result, value) => result || value.length > 0,
+    false
+  );
+}
